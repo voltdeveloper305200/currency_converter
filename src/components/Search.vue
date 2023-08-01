@@ -14,5 +14,3 @@ const store = useCurrenciesStore();
     />
   </div>
 </template>
-
-<style lang="scss" scoped></style>

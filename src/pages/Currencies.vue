@@ -22,5 +22,3 @@ const currencies = computed(() => {
     </div>
   </ContentCard>
 </template>
-
-<style lang="scss" scoped></style>

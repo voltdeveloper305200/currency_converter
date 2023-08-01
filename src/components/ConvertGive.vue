@@ -10,7 +10,7 @@ const input = computed({
 
 const store = useCurrenciesStore();
 
-const onInput = () => {
+const convertCurrency = () => {
   validateInput(store.amountFrom, store.typeAmountFrom);
   store.convertCurrency()
 };
@@ -21,7 +21,7 @@ const onInput = () => {
     <h5 class="text-16 text-basic">У меня есть</h5>
     <div class="input-block mt-10">
       <input
-        @input="onInput"
+        @input="convertCurrency"
         v-model="input"
         class="main-input"
         type="text"
@@ -40,5 +40,3 @@ const onInput = () => {
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped></style>

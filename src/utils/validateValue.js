@@ -16,16 +16,3 @@ export const validateInput = (input, setInput) => {
   }
   setInput(value);
 };
-
-export const validatePaste = (event) => {
-  event.preventDefault();
-  const pastedData = event.clipboardData.getData("text/plain");
-  const formattedData = pastedData.replace(/[^0-9,.]+/g, "");
-  const dotCount = (formattedData.match(/\./g) || []).length;
-  const commaCount = (formattedData.match(/,/g) || []).length;
-  if (dotCount > 1 || commaCount > 1) {
-    return;
-  }
-  const result = formattedData.replace(",", ".");
-  return result;
-};
